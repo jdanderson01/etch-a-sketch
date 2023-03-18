@@ -1,0 +1,18 @@
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(16, 0.8rem);
+  grid-template-rows: repeat(16, 0.8rem);
+}
+
+.square {
+  width: 0.875rem;
+  height: 0.875rem;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.square.hovered {
+  background-color: black;
+}
