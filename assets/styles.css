@@ -1,9 +1,15 @@
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
 .grid-container {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(16, 0.8rem);
   grid-template-rows: repeat(16, 0.8rem);
+  margin-top: 2rem;
 }
 
 .square {
@@ -13,14 +19,11 @@
   border: 1px solid black;
 }
 
-.square.hovered {
-  background-color: black;
-}
-
 .clear-button {
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: black;
+  background-color: royalblue;
+  padding: 0.9rem 1.5rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
