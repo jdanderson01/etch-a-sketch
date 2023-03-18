@@ -9,14 +9,28 @@ for (let i = 0; i < 16; i++) {
   }
 }
 
-//Add hover effect
 const squares = document.querySelectorAll(".square");
-
 const hoveredSquares = new Set();
+let currentColor = "#000000";
+
+const colorPicker = document.getElementById("color-picker");
+colorPicker.addEventListener("change", (event) => {
+  currentColor = event.target.value;
+});
+
+const updateColor = (event) => {
+  const color = event.target.value;
+  const hoveredClass = `.square.hovered { background-color: ${color}; }`;
+  const style = document.createElement("style");
+  style.appendChild(document.createTextNode(hoveredClass));
+  document.head.appendChild(style);
+};
+
+colorPicker.addEventListener("change", updateColor);
 
 const mouseOver = (event) => {
-  event.target.classList.add("hovered");
-  hoveredSquares.add(event.target);
+  event.target.classList.add("square.hovered");
+  event.target.style.backgroundColor = currentColor;
 };
 
 const mouseOut = (event) => {
