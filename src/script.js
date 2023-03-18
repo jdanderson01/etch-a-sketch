@@ -29,3 +29,15 @@ squares.forEach((square) => {
   square.addEventListener("mouseover", mouseOver);
   square.addEventListener("mouseout", mouseOut);
 });
+
+//Clear effect
+const clearButton = document.querySelector(".clear-button");
+
+const clear = () => {
+  squares.forEach((square) => {
+    square.classList.remove("hovered");
+  });
+  hoveredSquares.clear();
+};
+
+clearButton.addEventListener("click", clear);
