@@ -7,8 +7,8 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(16, 0.8rem);
-  grid-template-rows: repeat(16, 0.8rem);
+  width: 500px;
+  height: 500px;
   margin-top: 2rem;
 }
 
