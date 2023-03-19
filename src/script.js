@@ -1,14 +1,10 @@
 const container = document.querySelector(".grid-container");
 
-// Create 16x16 grid
-for (let i = 0; i < 16; i++) {
-  for (let j = 0; j < 16; j++) {
-    let square = document.createElement("div");
-    square.classList.add("square");
-    container.appendChild(square);
-  }
+for (let i = 0; i < 16 * 16; i++) {
+  let square = document.createElement("div");
+  square.classList.add("square");
+  container.appendChild(square);
 }
-
 const squares = document.querySelectorAll(".square");
 const hoveredSquares = new Set();
 let currentColor = "#000000";
