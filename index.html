@@ -11,6 +11,17 @@
   <body>
     <h1 class="heading">Etch A Sketch</h1>
     <div class="grid-container"></div>
-    <button class="clear-button" onclick="changeGridSize()">Reset</button>
+    <form>
+      <label for="favcolor">Select your favorite color:</label>
+      <input
+        type="color"
+        id="color-picker"
+        name="favcolor"
+        value="#000000"
+      /><br /><br />
+    </form>
+    <button class="clear-button" onclick="changeGridSize()">
+      Change Grid Size
+    </button>
   </body>
 </html>

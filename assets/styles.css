@@ -1,17 +1,33 @@
+@font-face {
+  font-family: "Upheaval";
+  src: url("/fonts/upheavtt.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .heading {
   display: flex;
   justify-content: center;
+  font-family: "Upheaval";
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .grid-container {
   display: grid;
   width: 500px;
   height: 500px;
+  margin: auto;
+  border: 20px outset red;
+  border-radius: 10px;
 }
 
 .square {
   background-color: white;
-  border: 1px solid black;
 }
 
 .clear-button {

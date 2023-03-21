@@ -1,5 +1,7 @@
 const container = document.querySelector(".grid-container");
-let size = 24;
+let size = 16;
+let currentColor = "#000000";
+const squares = document.querySelectorAll(".square");
 container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
 
@@ -9,9 +11,17 @@ const createGrid = (size) => {
   for (let i = 0; i < size * size; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
+    square.addEventListener("mouseover", () => {
+      square.style.backgroundColor = currentColor;
+    });
     container.appendChild(square);
   }
 };
+
+const colorPicker = document.querySelector("#color-picker");
+colorPicker.addEventListener("change", (e) => {
+  currentColor = e.target.value;
+});
 
 const changeGridSize = () => {
   let input = prompt("Enter grid size (e.g. 10 for a 10x10 grid):");
