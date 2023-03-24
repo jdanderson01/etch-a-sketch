@@ -34,12 +34,15 @@ body {
   background-color: white;
 }
 
-.centered {
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
-  margin-right: 35rem;
+}
+
+form,
+.clear-button {
+  margin: 10px;
 }
 
 .clear-button {
